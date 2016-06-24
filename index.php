@@ -8,7 +8,7 @@
 <body>
 	<?php 
 	echo "<pre style='height:200px;overflow:scroll;'>";
-	$FM = new FileManagement("./");
+	$FM = new FileManagement("./files");
 	print_r($FM->ReturnFiles());
 	echo "</pre>";
 

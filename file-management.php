@@ -10,6 +10,7 @@ class FileManagement
 
 	//File exclusion array, these files or folders will be exempt from indexing or deletion
 	protected $FileExclusion = [
+		"_trash",
 		"index.php",
 		"index.html",
 		"file-management.php",
@@ -39,7 +40,6 @@ class FileManagement
 		$Files = [];
 		foreach (new DirectoryIterator($this->FileRoot . $path) as $fileInfo) {
 			//Ignore dots and trashcan
-		    if($fileInfo->isDot()) continue;
 		    if(in_array($fileInfo->getFilename(), $this->FileExclusion)) continue;
 		    
 		    $Files[] = array(
