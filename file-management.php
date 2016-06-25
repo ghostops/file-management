@@ -119,7 +119,12 @@ class FileManagement
 		    	if(in_array($fileInfo->getFilename(), $this->FileExclusion)) continue;
 				
 				//Delete files in folder
-				$this->DeleteFile($path.$fileInfo);
+				if($this->DeleteFile($this->FileRoot . $path . $fileInfo)) {
+					echo "wutwut";
+				}
+				else {
+					echo "??";
+				}
 				echo "$fileInfo<br>";
 			}
 		}

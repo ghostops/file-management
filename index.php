@@ -16,7 +16,7 @@
 		echo "True";
 
 
-	$FM->DeleteFolder("doc/");
+	$FM->DeleteFolder("/doc");
 	?>
 
 	<form action="file-management.php" method="post" enctype="multipart/form-data">
